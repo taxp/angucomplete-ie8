@@ -9,18 +9,6 @@
 
 'use strict';
 
-(function (root, factory) {
-  if (typeof module !== 'undefined' && module.exports) {
-    // CommonJS
-    module.exports = factory(require('angular'));
-  } else if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['angular'], factory);
-  } else {
-    // Global Variables
-    factory(root.angular);
-  }
-}(window, function (angular) {
 
   angular.module('angucomplete-ie8', []).directive('angucompleteIe8', ['$q', '$parse', '$http', '$sce', '$timeout', '$templateCache', '$interpolate', function ($q, $parse, $http, $sce, $timeout, $templateCache, $interpolate) {
     // keyboard events
@@ -808,5 +796,3 @@
       }
     };
   }]);
-
-}));
